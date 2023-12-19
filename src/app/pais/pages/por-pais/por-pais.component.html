@@ -1,19 +1,24 @@
 <h2>Por pais</h2>
-<hr>
+<hr />
 
 <div class="row">
   <div class="col">
-    <app-pais-input (onEnter)="buscar($event)" (onDebounce)="sugerir($event)"></app-pais-input>
+    <app-pais-input
+      (onEnter)="buscar($event)"
+      (onDebounce)="sugerir($event)"
+      placeholder="Buscar pais"
+    ></app-pais-input>
   </div>
 </div>
 
-<hr>
+<hr />
+
 <div class="alert alert-danger" *ngIf="hayError">
-  No se encontro nada con el termino {{termino}}
+  No se encontro nada con el termino {{ termino }}
 </div>
 
 <div class="row" *ngIf="paises.length > 0">
   <div class="col">
-    <app-pais-tabla [paises]="paises"></app-pais-tabla> 
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
   </div>
 </div>
