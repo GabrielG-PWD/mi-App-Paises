@@ -32,4 +32,9 @@ export class PorPaisComponent {
       }
     })
   }
+
+  sugerir(termino: string) {
+    this.hayError = false;
+    console.log(termino);
+  }
 }
