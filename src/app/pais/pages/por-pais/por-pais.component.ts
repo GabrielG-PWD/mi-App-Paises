@@ -24,7 +24,7 @@ export class PorPaisComponent {
     .subscribe( {
       next: (paises) => {
         console.log(paises);
-        this.paises = [...paises]
+        this.paises = paises;
       },
       error: (err) => {
         this.hayError = true;
